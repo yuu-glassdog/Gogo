@@ -77,6 +77,10 @@ public class User_s13t232_01 extends GogoCompSub {
         //--  適当な評価の例
         // 相手の五連を崩す → 1000;
         // 勝利(五取) → 950;
+        if ( check_rem(cell, mycolor, i, j) && get_mystone(prev) == 8 ) {
+            values[i][j] = 950;
+            continue;
+        }
         // 勝利(五連) → 900;
         if ( check_run(cell, mycolor, i, j, 5) ) {
           values[i][j] = 900;
